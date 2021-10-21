@@ -1,10 +1,10 @@
-from django.db.models import CharField,  Model
+from django.db.models import CharField, Model
 from .users import Users
 
 
 class Products(Model):
     name = CharField(verbose_name="Name Product", default="", max_length=100, blank=False)
-    price = CharField(verbose_name="Price", default="", max_length=100, blank=False)
+    price = CharField(verbose_name="Price", default="", max_length=8, blank=False)
     description = CharField(verbose_name="description", default="", max_length=100, blank=False)
 
     def __str__(self):
